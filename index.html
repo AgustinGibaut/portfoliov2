@@ -1,49 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>AGUSTIN GIBAUT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-papNM8sxR271GGBqBPdZiZsaAJ+lZeX7IuAvV38DSHLVbkP4SRrped1IovnHgwlHGawEq+y3OCAXoTr4+g8v7A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-papNM8sxR271GGBqBPdZiZsaAJ+lZeX7IuAvV38DSHLVbkP4SRrped1IovnHgwlHGawEq+y3OCAXoTr4+g8v7A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
-
-    <!-- Navbar -->
+    <!-- NAVBAR -->
     <header>
-        <div class="logo">Agustín Gibaut</div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <h1>AGUSTIN GIBAUT</h1>
+        <nav class="nav-desktop">
+            <a href="cv.pdf" class="cv-btn" download onclick="celebrateDownload(event)">Descargar CV</a>
+            <a href="#about">Sobre mí</a>
+            <a href="#tech">Tecnologías</a>
+            <a href="#projects">Proyectos</a>
         </nav>
+
+        <!-- HAMBURGER MENU -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Hola, soy</h2>
-            <h1>AGUSTIN GIBAUT</h1>
-            <h3>Frontend Developer</h3>
-            <div class="buttons">
-                <a href="#">Download CV</a>
-                <a href="#">Contact Info</a>
+    <!-- MOBILE NAVIGATION -->
+    <nav class="nav-mobile">
+        <a href="cv.pdf" download onclick="celebrateDownload(event); toggleMenu()">Descargar CV</a>
+        <a href="#about" onclick="toggleMenu()">Sobre mí</a>
+        <a href="#tech" onclick="toggleMenu()">Tecnologías</a>
+        <a href="#projects" onclick="toggleMenu()">Proyectos</a>
+    </nav>
+
+    <!-- SOBRE MI -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>AGUSTIN GIBAUT</h2>
+                <h3>Frontend Developer</h3>
+                <p>
+                    Hola, soy Agustín Gibaut. Estudiante de desarrollo de software, actualmente en segundo año de la tecnicatura. Cuento con conocimientos tanto en frontend como en backend. Mi enfoque principal es React, en el cual día a día mejoro mis habilidades técnicas.
+                </p>
+                <br>
+                <p>
+                    Apasionado por crear experiencias web modernas e intuitivas, siempre buscando aprender nuevas tecnologías y mejorar mis habilidades para ofrecer soluciones innovadoras y eficientes.
+                </p>
             </div>
-            <div class="socials">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+            <div class="about-img">
+                <img src="AGUSTIN (2).png" alt="Foto de Agustín Gibaut">
             </div>
         </div>
-        <div class="hero-image">
-            <img src="AGUSTIN (2).png" alt="Profile Photo">
+    </section>
+    <!-- TECNOLOGÍAS -->
+    <section id="tech" class="skills">
+        <h2>Tecnologías</h2>
+        <ul class="skills-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>SQL / NoSQL</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Bootstrap</li>
+            <li>Linux</li>
+            <li>Figma</li>
+            <li>Sass</li>
+        </ul>
+    </section>
+
+
+    <!-- SOFT SKILLS -->
+    <section id="soft-skills" class="skills">
+        <h2>Soft Skills</h2>
+        <div class="soft-skills-grid">
+            <div class="skill-item">
+                <i class="fas fa-users"></i>
+                <p>Trabajo en equipo</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-comments"></i>
+                <p>Comunicación efectiva</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-lightbulb"></i>
+                <p>Creatividad e innovación</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-tasks"></i>
+                <p>Gestión de proyectos</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-brain"></i>
+                <p>Resolución de problemas</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-handshake"></i>
+                <p>Liderazgo</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-clock"></i>
+                <p>Gestión del tiempo</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-bullseye"></i>
+                <p>Orientación a resultados</p>
+            </div>
         </div>
     </section>
 
+    <!-- PROYECTOS -->
+    <section id="projects">
+        <h2>Mis Proyectos</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="img/style.vault.png" alt="Proyecto-style-vault">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Style Vault - Tienda de Ropa</h3>
+                    <p class="project-subtitle">HTML · CSS · JavaScript</p>
+                    <a href="https://tu-link.com" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <p class="project-description">
+                        Proyecto realizado con HTML, CSS y JavaScript. Maquetación completa para una tienda de ropa moderna con diseño responsivo
+                    </p>
+                </div>
+            </div>
+
+            <!-- BOTÓN SCROLL TO TOP -->
+            <div class="scroll-top" id="scrollTopBtn">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+
+
+            <!-- JAVASCRIPT -->
+            <script>
+                // HAMBURGER MENU
+                function toggleMenu() {
+                    document.querySelector('.hamburger').classList.toggle('active');
+                    document.querySelector('.nav-mobile').classList.toggle('active');
+                }
+
+                // BOTÓN DESCARGAR CV CON CONFETTI
+                function celebrateDownload(event) {
+                    event.preventDefault();
+                    const btn = event.target.closest(".cv-btn");
+                    btn.classList.add("celebrating");
+
+                    setTimeout(() => btn.classList.remove("celebrating"), 1000);
+
+                    // Crear confetti
+                    for (let i = 0; i < 20; i++) {
+                        const confetti = document.createElement("div");
+                        confetti.classList.add("confetti-particle");
+                        document.body.appendChild(confetti);
+
+                        const x = event.pageX;
+                        const y = event.pageY;
+
+                        confetti.style.left = x + "px";
+                        confetti.style.top = y + "px";
+                        confetti.style.animation = `confetti-fall 1s ease forwards`;
+                        confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+                        setTimeout(() => confetti.remove(), 1000);
+                    }
+
+                    // Descargar CV realmente
+                    setTimeout(() => {
+                        window.location.href = "cv.pdf";
+                    }, 600);
+                }
+
+                // BOTÓN SCROLL TO TOP
+                const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+                window.addEventListener("scroll", () => {
+                    if (window.scrollY > 300) {
+                        scrollTopBtn.classList.add("show");
+                    } else {
+                        scrollTopBtn.classList.remove("show");
+                    }
+                });
+
+                scrollTopBtn.addEventListener("click", () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                });
+            </script>
 </body>
 
 </html>
