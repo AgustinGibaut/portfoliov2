@@ -872,3 +872,118 @@ nav a:hover {
         padding: 20px;
     }
 }
+
+
+/* 📱 RESPONSIVIDAD OPTIMIZADA PARA TODOS LOS CELULARES */
+
+@media (max-width: 968px) {
+    .nav-desktop {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 12px 18px;
+    }
+    header h1 {
+        font-size: 16px;
+    }
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    .about-text {
+        order: 2;
+        font-size: 14px;
+    }
+    .about-img {
+        order: 1;
+        margin-bottom: 20px;
+    }
+    .about-img img {
+        max-width: 220px;
+    }
+    .skills-icons {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        gap: 15px;
+    }
+    .skills-icons i {
+        font-size: 32px;
+        width: 65px;
+        height: 65px;
+        padding: 15px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .skills h2,
+    #projects h2 {
+        font-size: 1.7rem;
+    }
+    .about-text h2 {
+        font-size: 22px;
+    }
+    .scroll-top {
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+    .scroll-top i {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about,
+    .skills,
+    #projects {
+        padding: 15px;
+        margin: 30px auto;
+    }
+    .about-img img {
+        max-width: 180px;
+    }
+    .skills-icons {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 12px;
+    }
+    .skills-icons i {
+        font-size: 28px;
+        width: 60px;
+        height: 60px;
+        padding: 12px;
+    }
+    .soft-skills-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .skill-item {
+        padding: 12px;
+    }
+    .skill-item i {
+        font-size: 22px;
+        margin-right: 12px;
+    }
+    .project-card {
+        padding: 15px;
+    }
+    .project-img img {
+        height: 160px;
+    }
+    .project-title {
+        font-size: 1.1rem;
+    }
+    .project-subtitle {
+        font-size: 0.85rem;
+    }
+    .project-description {
+        font-size: 0.9rem;
+    }
+}
