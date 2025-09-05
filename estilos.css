@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+    color: #222;
+}
+
+
+/* Navbar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: transparent;
+}
+
+header .logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+
+/* efecto hover: línea roja subiendo */
+
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: red;
+    transform: translateY(6px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: red;
+}
+
+header nav ul li a:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* Hero Section */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    gap: 40px;
+}
+
+
+/* Texto a la izquierda */
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.hero-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.hero-text h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.hero-text .buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.hero-text .buttons a {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #222;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.hero-text .buttons a:first-child {
+    background: #222;
+    color: #fff;
+}
+
+.hero-text .buttons a:first-child:hover {
+    background: #444;
+}
+
+.hero-text .buttons a:last-child {
+    background: transparent;
+    color: #222;
+}
+
+.hero-text .buttons a:last-child:hover {
+    background: #eee;
+}
+
+.hero-text .socials {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.hero-text .socials a {
+    color: #222;
+    transition: 0.3s;
+}
+
+.hero-text .socials a:hover {
+    color: #555;
+}
+
+
+/* Imagen a la derecha */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        order: 2;
+    }
+    .hero-image {
+        order: 1;
+        margin-bottom: 20px;
+    }
+}
