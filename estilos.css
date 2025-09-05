@@ -1,3 +1,7 @@
+/* ==========================
+   🎨 RESET + GLOBAL
+========================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +15,13 @@ body {
     overflow-x: hidden;
     animation: curtain 1s ease-in-out forwards;
     scroll-behavior: smooth;
+    line-height: 1.6;
 }
+
+
+/* ==========================
+   🎬 ANIMACIONES
+========================== */
 
 @keyframes curtain {
     0% {
@@ -39,7 +49,8 @@ body {
 }
 
 @keyframes bounce {
-    0% {
+    0%,
+    100% {
         transform: scale(1);
     }
     30% {
@@ -50,9 +61,6 @@ body {
     }
     70% {
         transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
     }
 }
 
@@ -91,9 +99,6 @@ body {
     }
 }
 
-
-/* ANIMACIÓN DE CONFETTI PARA EL BOTÓN CV */
-
 @keyframes confetti-fall {
     0% {
         opacity: 1;
@@ -104,6 +109,60 @@ body {
         transform: translateY(200px) rotate(360deg);
     }
 }
+
+@keyframes celebrate-bounce {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2) rotate(5deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-5deg);
+    }
+    75% {
+        transform: scale(1.15) rotate(3deg);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(77, 166, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(77, 166, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(77, 166, 255, 0.3);
+    }
+}
+
+
+/* ==========================
+   🎉 CONFETTI
+========================== */
 
 .confetti-particle {
     position: absolute;
@@ -122,6 +181,11 @@ body {
     background: #fff;
     border-radius: 2px;
 }
+
+
+/* ==========================
+   🧭 HEADER & NAV
+========================== */
 
 header {
     display: flex;
@@ -154,7 +218,6 @@ nav a {
     border: 1px solid #4da6ff;
     border-radius: 6px;
     transition: transform 0.3s, background 0.3s, color 0.3s;
-    position: relative;
     display: inline-block;
 }
 
@@ -163,6 +226,11 @@ nav a:hover {
     background: #4da6ff;
     color: #000;
 }
+
+
+/* ==========================
+   📄 BOTÓN CV
+========================== */
 
 .cv-btn {
     background: #4da6ff;
@@ -194,33 +262,14 @@ nav a:hover {
     animation: ripple 0.6s linear;
 }
 
-
-/* EFECTOS ESPECIALES PARA CV */
-
 .cv-btn.celebrating {
     animation: celebrate-bounce 0.6s ease;
 }
 
-@keyframes celebrate-bounce {
-    0% {
-        transform: scale(1);
-    }
-    25% {
-        transform: scale(1.2) rotate(5deg);
-    }
-    50% {
-        transform: scale(1.1) rotate(-5deg);
-    }
-    75% {
-        transform: scale(1.15) rotate(3deg);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
 
-
-/* HAMBURGER MENU */
+/* ==========================
+   🍔 HAMBURGER MENU
+========================== */
 
 .hamburger {
     display: none;
@@ -228,7 +277,6 @@ nav a:hover {
     cursor: pointer;
     gap: 4px;
     padding: 10px;
-    position: relative;
     z-index: 1001;
 }
 
@@ -237,7 +285,6 @@ nav a:hover {
     height: 3px;
     background: #4da6ff;
     transition: all 0.3s ease;
-    transform-origin: center;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -279,9 +326,9 @@ nav a:hover {
     padding: 15px 30px;
     border: 2px solid #4da6ff;
     border-radius: 10px;
-    transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
+    transition: all 0.3s ease;
 }
 
 .nav-mobile.active a {
@@ -312,6 +359,11 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+
+/* ==========================
+   📌 SECCIÓN ABOUT
+========================== */
+
 .about {
     max-width: 1200px;
     margin: 60px auto;
@@ -336,11 +388,9 @@ nav a:hover {
 .about-text h2 {
     font-size: 32px;
     margin-bottom: 10px;
-    color: #fff;
     background: linear-gradient(45deg, #4da6ff, #fff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .about-text h3 {
@@ -352,7 +402,6 @@ nav a:hover {
 
 .about-text p {
     font-size: 16px;
-    line-height: 1.8;
     color: #ddd;
     transition: color 0.3s;
 }
@@ -382,6 +431,11 @@ nav a:hover {
     box-shadow: 0 15px 35px rgba(77, 166, 255, 0.4);
 }
 
+
+/* ==========================
+   💡 SECCIÓN SKILLS
+========================== */
+
 .skills {
     max-width: 1200px;
     margin: 80px auto;
@@ -389,14 +443,34 @@ nav a:hover {
     text-align: left;
 }
 
+.skills h2 {
+    font-size: 32px;
+    color: #4da6ff;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.skills h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #4da6ff, #fff);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+
+/* Hard skills (texto) */
+
 .skills-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     list-style: none;
-    padding: 0;
-    margin: 40px auto;
     max-width: 800px;
+    margin: 40px auto;
     text-align: center;
 }
 
@@ -418,23 +492,8 @@ nav a:hover {
     box-shadow: 0 10px 25px rgba(77, 166, 255, 0.4);
 }
 
-.skills h2 {
-    font-size: 32px;
-    color: #4da6ff;
-    margin-bottom: 40px;
-    position: relative;
-    text-align: center;
-}
 
-.skills h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #4da6ff, #fff);
-    margin: 15px auto;
-    border-radius: 2px;
-}
+/* Hard skills (íconos) */
 
 .skills-icons {
     display: grid;
@@ -455,9 +514,9 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.4s ease;
     cursor: pointer;
     animation: float 3s ease-in-out infinite;
+    transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
 }
@@ -477,16 +536,6 @@ nav a:hover {
     left: 100%;
 }
 
-@keyframes float {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-}
-
 .skills-icons i:hover {
     color: #fff;
     background: linear-gradient(145deg, #4da6ff, #6db8ff);
@@ -496,7 +545,7 @@ nav a:hover {
 }
 
 
-/* SOFT SKILLS MEJORADAS */
+/* Soft skills */
 
 .soft-skills-grid {
     display: grid;
@@ -544,7 +593,6 @@ nav a:hover {
 .skill-item p {
     font-size: 16px;
     color: #ddd;
-    margin: 0;
     font-weight: 500;
 }
 
@@ -564,7 +612,9 @@ nav a:hover {
 }
 
 
-/* PROYECTOS MEJORADOS */
+/* ==========================
+   🚀 PROYECTOS
+========================== */
 
 #projects {
     background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
@@ -588,26 +638,16 @@ nav a:hover {
     animation: shimmer 2s linear infinite;
 }
 
-@keyframes shimmer {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
 #projects h2 {
     font-size: 2.5rem;
-    letter-spacing: 2px;
     font-weight: 700;
-    text-shadow: 0 0 15px rgba(77, 166, 255, 0.8);
     text-align: center;
     margin-bottom: 50px;
     background: linear-gradient(45deg, #4da6ff, #fff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(77, 166, 255, 0.8);
 }
 
 .projects-grid {
@@ -622,9 +662,9 @@ nav a:hover {
     border: 2px solid #4da6ff;
     border-radius: 20px;
     padding: 25px;
-    transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    transition: all 0.4s ease;
 }
 
 .project-card::before {
@@ -659,8 +699,8 @@ nav a:hover {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    transition: transform 0.4s ease;
     filter: brightness(0.9);
+    transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .project-card:hover .project-img img {
@@ -684,6 +724,14 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
+.project-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 15px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
 .project-link {
     position: absolute;
     top: 25px;
@@ -691,7 +739,6 @@ nav a:hover {
     color: #4da6ff;
     font-size: 1.5rem;
     text-decoration: none;
-    transition: all 0.3s ease;
     background: rgba(0, 0, 0, 0.7);
     padding: 8px;
     border-radius: 50%;
@@ -700,6 +747,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .project-link:hover {
@@ -708,17 +756,10 @@ nav a:hover {
     transform: scale(1.2);
 }
 
-.project-description {
-    font-size: 1rem;
-    color: #ccc;
-    margin-top: 15px;
-    border-top: 1px solid #444;
-    padding-top: 15px;
-    line-height: 1.6;
-}
 
-
-/* BOTÓN SCROLL TO TOP */
+/* ==========================
+   ⬆️ BOTÓN SCROLL TOP
+========================== */
 
 .scroll-top {
     position: fixed;
@@ -732,21 +773,20 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s ease;
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(77, 166, 255, 0.3);
+    transition: all 0.3s ease;
 }
 
 .scroll-top.show {
     opacity: 1;
     visibility: visible;
+    animation: pulse 2s infinite;
 }
 
 .scroll-top:hover {
     transform: translateY(-8px) scale(1.1);
-    box-shadow: 0 15px 35px rgba(77, 166, 255, 0.6);
 }
 
 .scroll-top i {
@@ -756,26 +796,12 @@ nav a:hover {
 }
 
 
-/* ANIMACIÓN PULSANTE PARA EL BOTÓN */
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 4px 15px rgba(77, 166, 255, 0.3);
-    }
-    50% {
-        box-shadow: 0 4px 25px rgba(77, 166, 255, 0.6);
-    }
-    100% {
-        box-shadow: 0 4px 15px rgba(77, 166, 255, 0.3);
-    }
-}
-
-.scroll-top.show {
-    animation: pulse 2s infinite;
-}
+/* ==========================
+   📱 RESPONSIVE UNIVERSAL
+========================== */
 
 
-/* RESPONSIVIDAD MEJORADA */
+/* Tablets & móviles grandes */
 
 @media (max-width: 968px) {
     .nav-desktop {
@@ -786,111 +812,15 @@ nav a:hover {
     }
 }
 
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-    }
-    header h1 {
-        font-size: 18px;
-    }
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-text {
-        order: 2;
-    }
-    .about-img {
-        order: 1;
-        margin-bottom: 30px;
-    }
-    .about-img img {
-        max-width: 250px;
-    }
-    .skills-icons {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-        gap: 20px;
-    }
-    .skills-icons i {
-        font-size: 40px;
-        width: 75px;
-        height: 75px;
-    }
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    .skills h2,
-    #projects h2 {
-        font-size: 2rem;
-    }
-    .about-text h2 {
-        font-size: 28px;
-    }
-    .scroll-top {
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-    }
-    .scroll-top i {
-        font-size: 18px;
-    }
-}
 
-@media (max-width: 480px) {
-    .about,
-    .skills,
-    #projects {
-        padding: 20px;
-        margin: 40px auto;
-    }
-    .about-img img {
-        max-width: 200px;
-    }
-    .skills-icons {
-        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-        gap: 15px;
-    }
-    .skills-icons i {
-        font-size: 35px;
-        width: 70px;
-        height: 70px;
-    }
-    .soft-skills-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .skill-item {
-        padding: 15px;
-    }
-    .skill-item i {
-        font-size: 26px;
-        margin-right: 15px;
-    }
-    .project-card {
-        padding: 20px;
-    }
-}
-
-
-/* 📱 RESPONSIVIDAD OPTIMIZADA PARA TODOS LOS CELULARES */
-
-@media (max-width: 968px) {
-    .nav-desktop {
-        display: none;
-    }
-    .hamburger {
-        display: flex;
-    }
-}
+/* Tablets verticales y móviles medianos */
 
 @media (max-width: 768px) {
     header {
         padding: 12px 18px;
     }
     header h1 {
-        font-size: 16px;
+        font-size: 18px;
     }
     .about-container {
         flex-direction: column;
@@ -939,6 +869,9 @@ nav a:hover {
         font-size: 16px;
     }
 }
+
+
+/* Móviles pequeños */
 
 @media (max-width: 480px) {
     .about,
